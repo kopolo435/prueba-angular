@@ -1,0 +1,23 @@
+<form action="" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label for="email">Email: </label>
+    <div>
+        <button type="button" (click)="clearEmailField()">Clear Field</button>
+        <input type="text" id="email" formControlName="email">
+    </div>
+    <p>Email Value: {{this.profileForm.controls.email.value}}</p>
+
+    <label for="password"></label>
+    <input type="password" id="password" formControlName="password">
+    <p>Password Value: {{this.profileForm.controls.password.value}}</p>
+
+    <button type="submit">Iniciar sesión</button>
+</form>
+@if (user$ | async; as user ){
+<p>email: {{user.email}}</p>
+<p>firstName: {{user.firstName}}</p>
+<p>lastName: {{user.lastName}}</p>
+<p>role: {{user.role}}</p>
+<p>undefined: {{undefined}}</p>
+}@else {
+<p>Please enter your credentials and click Submit.</p>
+}

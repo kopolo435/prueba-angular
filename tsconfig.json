@@ -13,14 +13,39 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "preserve",
+    // DO NOT remove 'emitDecoratorMetadata'! '@typescript-eslint/consistent-type-imports' rule requires it
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "typeCheckHostBindings": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "strictStandalone": true,
+    "disableTypeScriptVersionCheck": true,
+    "extendedDiagnostics": {
+      "checks": {
+        "optionalChainNotNullable": "suppress",
+        "nullishCoalescingNotNullable": "suppress",
+        "suffixNotSupported": "warning",
+        "textAttributeNotBinding": "warning",
+        "invalidBananaInBox": "error",
+        "missingControlFlowDirective": "error",
+        "missingNgForOfLet": "error",
+        "controlFlowPreventingContentProjection": "error",
+        "unusedStandaloneImports": "warning"
+      },
+      "defaultCategory": "error"
+    }
   },
   "files": [],
   "references": [

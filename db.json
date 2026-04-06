@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "email": "s.fanilla@bgeneral.com",
+      "password": 12345,
+      "firstName": "Samir",
+      "lastName": "Fanilla",
+      "role": "admin"
+    },
+    {
+      "email": "test@test.com",
+      "password": 12345,
+      "firstName": "Test",
+      "lastName": "User",
+      "role": "user"
+    }
+  ]
+}

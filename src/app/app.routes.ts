@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import type { Routes } from '@angular/router';
 import { Login } from './features/login/login';
 import { MainLayout } from './layouts/main-layout/main-layout';
 import { NonAuthLayout } from './layouts/non-auth-layout/non-auth-layout';
