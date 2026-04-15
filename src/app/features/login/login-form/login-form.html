@@ -1,8 +1,11 @@
 <form action="" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
     <label for="email">Email: </label>
     <div>
-        <button type="button" (click)="clearEmailField()">Clear Field</button>
-        <input type="text" id="email" formControlName="email">
+        <input pInputText type="text" id="email" placeholder="Email" formControlName="email" />
+    </div>
+
+    <div>
+        <input pInputText type="text" id="password" formControlName="password">
     </div>
     <p>Email Value: {{this.profileForm.controls.email.value}}</p>
 
@@ -10,7 +13,9 @@
     <input type="password" id="password" formControlName="password">
     <p>Password Value: {{this.profileForm.controls.password.value}}</p>
 
-    <button type="submit">Iniciar sesión</button>
+
+    <p-button label="Iniciar sesión" type="submit"></p-button>
+    <h1 class="text-3xl font-bold underline">Hello world!</h1>
 </form>
 @if (user$ | async; as user ){
 <p>email: {{user.email}}</p>

@@ -4,10 +4,12 @@ import { LoginFormService } from './login-form-service';
 import { Observable } from 'rxjs';
 import { User } from './user';
 import { AsyncPipe } from '@angular/common';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
   selector: 'app-login-form',
-  imports: [ReactiveFormsModule, AsyncPipe],
+  imports: [ReactiveFormsModule, AsyncPipe, ButtonModule, InputTextModule],
   templateUrl: './login-form.html',
   styleUrl: './login-form.scss',
 })
